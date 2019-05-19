@@ -1,0 +1,125 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" >
+
+    <title>Student Management System</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="css/dashboard.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Student Management System</a>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+            <div class="sidebar-sticky">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link " href="index.html">
+                            <span data-feather="home"></span>
+                            Dashboard <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="manageCourse.html">
+                            <span data-feather="home"></span>
+                            Manage Course <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="ManageBatch.html">
+                            <span data-feather="file"></span>
+                            Manage Batches
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="RegisterStudent.html">
+                            <span data-feather="shopping-cart"></span>
+                            Register Students
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h1 class="h2">Manage Batch</h1>
+            </div>
+
+            <form>
+                <div class="form-group" style="width: 30%">
+                    <label>Select course</label>
+                    <select class="form-control" id="cmbCourseID">
+                        <!--<option>1</option>-->
+                        <!--<option>2</option>-->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Course Name</label>
+                    <lable class="form-control" id="lblCourseName"></lable>
+                </div>
+                <div class="form-group">
+                    <label>Batch ID</label>
+                    <input type="text" class="form-control" placeholder=" Enter Batch ID" id="txtBatchId">
+                </div>
+                <div class="form-group">
+                    <label>Batch Name</label>
+                    <input type="text" class="form-control" placeholder=" Enter Batch Name" id="txtBatchName">
+                </div>
+
+            </form>
+            <button class="btn btn-primary" id="btnSave">Save</button>
+            <h2>Batch Details</h2>
+            <div class="table-responsive">
+                <table class="table table-striped table-sm" id="tblCourse">
+                    <thead>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Student Name</th>
+                        <th>Batch id</th>
+                        <th>Batch Name</th>
+                        <th>Course Id</th>
+                        <th>Course Name</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</div>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/database.js"></script>
+<script src="js/course.js"></script>
+</body>
+</html>
